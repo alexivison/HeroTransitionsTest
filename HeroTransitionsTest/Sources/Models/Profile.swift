@@ -10,7 +10,17 @@ import Foundation
 
 struct Profile {
     let id: Int
-    let lastName: String
-    let firsName: String
     let age: Int
+    
+    var avatarUrl: String
+    var lastName: String
+    var firsName: String
+    
+    init(id: Int, lastName: String, firstName: String, age: Int, avatarUrl: String) {
+        self.id = id
+        self.lastName = lastName
+        self.firsName = firstName
+        self.age = age
+        self.avatarUrl = avatarUrl
+    }
 }

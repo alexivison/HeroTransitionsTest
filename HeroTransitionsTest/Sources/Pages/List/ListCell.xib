@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ListCell" id="gTV-IL-0wX" customClass="ListCell" customModule="HeroTransitionsTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etG-HX-Ind">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-gh-L6l">
+                        <rect key="frame" x="20" y="258" width="310" height="72"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-2P-alN">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-wz-0vH">
+                                        <rect key="frame" x="8" y="6.5" width="294" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nBf-wz-0vH" firstAttribute="leading" secondItem="TCd-2P-alN" secondAttribute="leading" constant="8" id="1MO-2a-LRx"/>
+                                    <constraint firstAttribute="trailing" secondItem="nBf-wz-0vH" secondAttribute="trailing" constant="8" id="MQu-Gp-Xsb"/>
+                                    <constraint firstAttribute="height" constant="32" id="bAJ-Ri-nRO"/>
+                                    <constraint firstItem="nBf-wz-0vH" firstAttribute="centerY" secondItem="TCd-2P-alN" secondAttribute="centerY" id="dm8-0C-IeH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-iu-cwe">
+                                <rect key="frame" x="0.0" y="40" width="310" height="32"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iKa-iW-lnI">
+                                        <rect key="frame" x="8" y="6.5" width="294" height="19.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzZ-pD-Hhr">
+                                                <rect key="frame" x="0.0" y="0.0" width="28.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBg-Y5-CFv">
+                                                <rect key="frame" x="36.5" y="0.0" width="257.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iKa-iW-lnI" firstAttribute="leading" secondItem="iz5-iu-cwe" secondAttribute="leading" constant="8" id="MK9-xj-0fl"/>
+                                    <constraint firstAttribute="trailing" secondItem="iKa-iW-lnI" secondAttribute="trailing" constant="8" id="ZKX-dw-f3D"/>
+                                    <constraint firstAttribute="height" constant="32" id="a4W-0s-kBO"/>
+                                    <constraint firstItem="iKa-iW-lnI" firstAttribute="centerY" secondItem="iz5-iu-cwe" secondAttribute="centerY" id="kJe-oH-JDj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="h8m-gh-L6l" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Fww-5t-qpg"/>
+                <constraint firstAttribute="bottom" secondItem="etG-HX-Ind" secondAttribute="bottom" id="Ojx-G3-WnO"/>
+                <constraint firstItem="etG-HX-Ind" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SQi-9X-yK7"/>
+                <constraint firstAttribute="trailing" secondItem="h8m-gh-L6l" secondAttribute="trailing" constant="20" id="ayj-L6-Kz8"/>
+                <constraint firstAttribute="bottom" secondItem="h8m-gh-L6l" secondAttribute="bottom" constant="20" id="f5S-nT-87U"/>
+                <constraint firstItem="etG-HX-Ind" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qnU-1c-RII"/>
+                <constraint firstAttribute="trailing" secondItem="etG-HX-Ind" secondAttribute="trailing" id="tco-u2-ygT"/>
+            </constraints>
+            <size key="customSize" width="350" height="350"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="16"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="ageLabel" destination="wzZ-pD-Hhr" id="Jqk-YF-ORY"/>
+                <outlet property="imageView" destination="etG-HX-Ind" id="1aU-G0-DQd"/>
+                <outlet property="locationLabel" destination="mBg-Y5-CFv" id="edS-sg-FA1"/>
+                <outlet property="nameLabel" destination="nBf-wz-0vH" id="fUl-00-0EA"/>
+            </connections>
+            <point key="canvasLocation" x="266.66666666666669" y="135.9375"/>
+        </collectionViewCell>
+    </objects>
+</document>

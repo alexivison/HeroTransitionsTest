@@ -25,47 +25,58 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="testImageView"/>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2H5-MF-8an">
+                                <rect key="frame" x="0.0" y="553" width="414" height="309"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-yw-kV1">
+                                        <rect key="frame" x="20" y="20" width="192" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.12780907296287225" green="0.12780907296287225" blue="0.12780907296287225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cgA-yw-kV1" firstAttribute="leading" secondItem="2H5-MF-8an" secondAttribute="leading" constant="20" id="ctr-bl-ED2"/>
+                                    <constraint firstItem="cgA-yw-kV1" firstAttribute="top" secondItem="2H5-MF-8an" secondAttribute="top" constant="20" id="ppa-I8-Up9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISB-Hg-YeA">
-                                <rect key="frame" x="162" y="806" width="90" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <rect key="frame" x="338" y="52" width="56" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <inset key="contentEdgeInsets" minX="20" minY="8" maxX="20" maxY="8"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="V9i-d6-OmE" eventType="touchUpInside" id="eel-gq-eNp"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2H5-MF-8an">
-                                <rect key="frame" x="0.0" y="553" width="414" height="80"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-yw-kV1" customClass="Label" customModule="HeroTransitionsTest" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="22" width="398" height="36.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="textColor" red="0.12780907296287225" green="0.12780907296287225" blue="0.12780907296287225" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="t0X-w9-HUc"/>
-                                </constraints>
-                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.262589452" green="0.83103341750000004" blue="0.88554885790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KzZ-Fo-WYp" firstAttribute="bottom" secondItem="ISB-Hg-YeA" secondAttribute="bottom" constant="20" id="6iq-kI-2Lf"/>
-                            <constraint firstItem="2H5-MF-8an" firstAttribute="leading" secondItem="KzZ-Fo-WYp" secondAttribute="leading" id="6t3-Nl-R4k"/>
-                            <constraint firstItem="2H5-MF-8an" firstAttribute="trailing" secondItem="KzZ-Fo-WYp" secondAttribute="trailing" id="GlM-H4-Ref"/>
+                            <constraint firstItem="2H5-MF-8an" firstAttribute="top" secondItem="iIq-EM-PiG" secondAttribute="bottom" id="9Kb-np-rdN"/>
                             <constraint firstItem="iIq-EM-PiG" firstAttribute="leading" secondItem="KzZ-Fo-WYp" secondAttribute="leading" id="Hxc-gE-hEx"/>
                             <constraint firstItem="iIq-EM-PiG" firstAttribute="trailing" secondItem="KzZ-Fo-WYp" secondAttribute="trailing" id="KKy-50-8c6"/>
-                            <constraint firstItem="2H5-MF-8an" firstAttribute="top" secondItem="iIq-EM-PiG" secondAttribute="bottom" id="PAk-Dc-Zba"/>
+                            <constraint firstItem="KzZ-Fo-WYp" firstAttribute="trailing" secondItem="ISB-Hg-YeA" secondAttribute="trailing" constant="20" id="TfW-Mz-fUU"/>
+                            <constraint firstItem="2H5-MF-8an" firstAttribute="trailing" secondItem="KzZ-Fo-WYp" secondAttribute="trailing" id="V0a-qS-EM1"/>
                             <constraint firstItem="KzZ-Fo-WYp" firstAttribute="centerY" secondItem="iIq-EM-PiG" secondAttribute="bottom" constant="-100" id="Vd2-7j-yJG"/>
                             <constraint firstItem="iIq-EM-PiG" firstAttribute="top" secondItem="2Ao-c2-jFN" secondAttribute="top" id="Yij-fO-ANx"/>
-                            <constraint firstItem="ISB-Hg-YeA" firstAttribute="centerX" secondItem="2Ao-c2-jFN" secondAttribute="centerX" id="xVq-XS-jyU"/>
+                            <constraint firstItem="ISB-Hg-YeA" firstAttribute="top" secondItem="KzZ-Fo-WYp" secondAttribute="top" constant="8" id="ao1-40-caP"/>
+                            <constraint firstItem="2H5-MF-8an" firstAttribute="bottom" secondItem="KzZ-Fo-WYp" secondAttribute="bottom" id="hcY-aa-bYw"/>
+                            <constraint firstItem="2H5-MF-8an" firstAttribute="leading" secondItem="KzZ-Fo-WYp" secondAttribute="leading" id="qdM-c1-jyx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KzZ-Fo-WYp"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
