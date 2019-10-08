@@ -26,9 +26,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-2P-alN">
                                 <rect key="frame" x="0.0" y="0.0" width="310" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname Lastname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-wz-0vH">
-                                        <rect key="frame" x="8" y="6.5" width="294" height="19.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-wz-0vH">
+                                        <rect key="frame" x="8" y="6.5" width="294" height="19"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="16"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -49,17 +49,11 @@
                                 <rect key="frame" x="0.0" y="40" width="310" height="32"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iKa-iW-lnI">
-                                        <rect key="frame" x="8" y="6.5" width="294" height="19.5"/>
+                                        <rect key="frame" x="8" y="6.5" width="294" height="19"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzZ-pD-Hhr">
-                                                <rect key="frame" x="0.0" y="0.0" width="28.5" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBg-Y5-CFv">
-                                                <rect key="frame" x="36.5" y="0.0" width="257.5" height="19.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzZ-pD-Hhr">
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="19"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -99,10 +93,9 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="ageLabel" destination="wzZ-pD-Hhr" id="Jqk-YF-ORY"/>
-                <outlet property="imageView" destination="etG-HX-Ind" id="1aU-G0-DQd"/>
-                <outlet property="locationLabel" destination="mBg-Y5-CFv" id="edS-sg-FA1"/>
-                <outlet property="nameLabel" destination="nBf-wz-0vH" id="fUl-00-0EA"/>
+                <outlet property="bandNameLabel" destination="wzZ-pD-Hhr" id="Jqk-YF-ORY"/>
+                <outlet property="thumbnailImageView" destination="etG-HX-Ind" id="1aU-G0-DQd"/>
+                <outlet property="titleLabel" destination="nBf-wz-0vH" id="fUl-00-0EA"/>
             </connections>
             <point key="canvasLocation" x="266.66666666666669" y="135.9375"/>
         </collectionViewCell>

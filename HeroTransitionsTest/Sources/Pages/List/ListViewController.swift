@@ -28,7 +28,7 @@ extension ListViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let controller = DetailViewController.instantiate() as! DetailViewController
 
-        controller.inject(DetailViewController.Dependency(profile: DummyData[indexPath.row]))
+        controller.inject(DetailViewController.Dependency(album: DummyAlbums[indexPath.row]))
         
         present(controller, animated: true)
     }
@@ -36,19 +36,25 @@ extension ListViewController: UICollectionViewDelegate {
 
 extension ListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 350)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.width)
     }
 }
 
 extension ListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DummyData.count
+        return DummyAlbums.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ListHeader", for: indexPath)
+
+        return header
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath) as! ListCell
         
-        cell.bind(ListCell.Context(profile: DummyData[indexPath.row]))
+        cell.bind(ListCell.Context(album: DummyAlbums[indexPath.row]))
         
         return cell
     }

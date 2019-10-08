@@ -9,38 +9,54 @@
 import UIKit
 import Hero
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, Injectable {
     
     struct Dependency {
-        var profile: Profile
+        var album: Album
     }
     
-    private var profile: Profile!
+    private var album: Album!
+    private var heroId: String!
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageTitleLabel: Label!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bandNameLabel: UILabel!
+    @IBOutlet weak var trackStackView: UIStackView!
     
     func inject(_ dependency: Dependency) {
-        self.profile = dependency.profile
+        self.album = dependency.album
+        self.heroId = String(dependency.album.id)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.hero.isEnabled = true
-        view.hero.id = "testView-\(String(profile.id))"
+        view.hero.id = "shopDetail-\(heroId!)"
         
-        imageView.hero.isEnabled = true
-        imageView.hero.id = "testImageView-\(String(profile.id))"
-        imageView.image = UIImage(named: profile.avatarUrl)
+        thumbnailImageView.hero.isEnabled = true
+        thumbnailImageView.hero.id = "thumbnailImageView-\(heroId!)"
+        thumbnailImageView.image = UIImage(named: album.thumbnailUrl)
         
-        imageTitleLabel.hero.isEnabled = true
-        imageTitleLabel.hero.id = "testImageTitleLabel-\(String(profile.id))"
-        imageTitleLabel.text = "\(profile.firsName) \(profile.lastName)"
+        titleLabel.hero.isEnabled = true
+        titleLabel.hero.id = "titleLabel-\(heroId!)"
+        titleLabel.text = album.title
+        
+        bandNameLabel.hero.isEnabled = true
+        bandNameLabel.hero.id = "bandNameLabel-\(heroId!)"
+        bandNameLabel.text = album.band.name
+        
+        setTracks()
     }
     
-    @IBAction func cancelButtonTapped(_ sender: Any) {
-        dismiss(animated: true)
+    private func setTracks() {
+        let tracks = album.tracks
+        
+        for track in tracks {
+            let trackView = UILabel()
+            trackView.text = track.title
+            
+            trackStackView.addArrangedSubview(trackView)
+        }
     }
 }

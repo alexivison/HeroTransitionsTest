@@ -11,28 +11,27 @@ import UIKit
 class ListCell: UICollectionViewCell, HasNib, HasContext {
 
     struct Context {
-        var profile: Profile
+        var album: Album
     }
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bandNameLabel: UILabel!
     
     func bind(_ context: ListCell.Context) {
-        hero.id = "testView-\(context.profile.id)"
+        hero.id = "shopDetail-\(context.album.id)"
         
-        imageView.image = UIImage(named: context.profile.avatarUrl)
-        imageView.hero.isEnabled = true
-        imageView.hero.id = "testImageView-\(String(context.profile.id))"
+        thumbnailImageView.image = UIImage(named: context.album.thumbnailUrl)
+        thumbnailImageView.hero.isEnabled = true
+        thumbnailImageView.hero.id = "thumbnailImageView-\(String(context.album.id))"
 
-        nameLabel.hero.isEnabled = true
-        nameLabel.hero.id = "testImageTitleLabel-\(String(context.profile.id))"
-        nameLabel.text = "\(context.profile.firsName) \(context.profile.lastName)"
+        titleLabel.hero.isEnabled = true
+        titleLabel.hero.id = "titleLabel-\(String(context.album.id))"
+        titleLabel.text = context.album.title
         
-        ageLabel.hero.isEnabled = true
-        ageLabel.hero.id = "ageLabel-\(context.profile.id)"
-        ageLabel.text = String(context.profile.age)
+        bandNameLabel.hero.isEnabled = true
+        bandNameLabel.hero.id = "bandNameLabel-\(context.album.id)"
+        bandNameLabel.text = context.album.band.name
     }
 
 }
