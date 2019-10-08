@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,6 +25,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sNm-vF-VMe">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="316"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsg-Xh-eqe">
                                                 <rect key="frame" x="0.0" y="300" width="414" height="621"/>
@@ -33,7 +33,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cti-hw-l7P">
                                                         <rect key="frame" x="20" y="20" width="129.5" height="28"/>
                                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="24"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fd-jL-lVm">
@@ -46,7 +46,7 @@
                                                         <rect key="frame" x="20" y="95" width="374" height="506"/>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.19814800129999999" green="0.19814800129999999" blue="0.19814800129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5fd-jL-lVm" secondAttribute="trailing" constant="20" id="7go-QX-2yx"/>
                                                     <constraint firstAttribute="trailing" secondItem="a08-Yh-JS5" secondAttribute="trailing" constant="20" id="AKc-Ce-cRj"/>
@@ -66,7 +66,6 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.127809073" green="0.127809073" blue="0.127809073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="dsg-Xh-eqe" firstAttribute="top" secondItem="sNm-vF-VMe" secondAttribute="bottom" constant="-16" id="0bk-Xh-ad5"/>
                                             <constraint firstAttribute="trailing" secondItem="sNm-vF-VMe" secondAttribute="trailing" id="4Z4-GZ-fqQ"/>
@@ -86,7 +85,6 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.19814800129999999" green="0.19814800129999999" blue="0.19814800129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="G7P-u8-i9u" firstAttribute="leading" secondItem="KzZ-Fo-WYp" secondAttribute="leading" id="Qrb-vA-d2e"/>
                             <constraint firstItem="57K-fy-ShQ" firstAttribute="width" secondItem="2Ao-c2-jFN" secondAttribute="width" id="ajv-Qf-pT5"/>
@@ -107,6 +105,7 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="albumDetailView" destination="dsg-Xh-eqe" id="hRc-e0-Kq5"/>
                         <outlet property="bandNameLabel" destination="5fd-jL-lVm" id="bcU-yI-rCu"/>
                         <outlet property="thumbnailImageView" destination="sNm-vF-VMe" id="URg-RG-aKc"/>
                         <outlet property="titleLabel" destination="Cti-hw-l7P" id="rUX-Fw-MzX"/>

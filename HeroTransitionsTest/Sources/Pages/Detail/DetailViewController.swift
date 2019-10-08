@@ -17,8 +17,11 @@ class DetailViewController: UIViewController, Injectable {
     
     private var album: Album!
     private var heroId: String!
+    
+    private var screenEdgeRecognizer: UIScreenEdgePanGestureRecognizer!
 
     @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var albumDetailView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bandNameLabel: UILabel!
     @IBOutlet weak var trackStackView: UIStackView!
@@ -31,8 +34,13 @@ class DetailViewController: UIViewController, Injectable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.hero.isEnabled = true
-        view.hero.id = "shopDetail-\(heroId!)"
+        screenEdgeRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleGesture))
+        screenEdgeRecognizer.edges = .left
+        
+        view.addGestureRecognizer(screenEdgeRecognizer)
+        
+        albumDetailView.hero.isEnabled = true
+        albumDetailView.hero.id = "albumDetail-\(heroId!)"
         
         thumbnailImageView.hero.isEnabled = true
         thumbnailImageView.hero.id = "thumbnailImageView-\(heroId!)"
@@ -57,6 +65,25 @@ class DetailViewController: UIViewController, Injectable {
             trackView.text = track.title
             
             trackStackView.addArrangedSubview(trackView)
+        }
+    }
+    
+    @objc
+    private func handleGesture(sender: UIScreenEdgePanGestureRecognizer) {
+        let translation = sender.translation(in: nil)
+        let progress = translation.x / 1.5 / view.bounds.width
+
+        switch sender.state {
+        case .began:
+            dismiss(animated: true)
+        case .changed:
+            Hero.shared.update(progress)
+        default:
+            if progress + sender.velocity(in: nil).x / view.bounds.width > 0.3 {
+                Hero.shared.finish()
+            } else {
+                Hero.shared.cancel()
+            }
         }
     }
 }

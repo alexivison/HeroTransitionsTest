@@ -94,8 +94,10 @@
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="bandNameLabel" destination="wzZ-pD-Hhr" id="Jqk-YF-ORY"/>
+                <outlet property="bandView" destination="iz5-iu-cwe" id="ahG-jv-jgl"/>
                 <outlet property="thumbnailImageView" destination="etG-HX-Ind" id="1aU-G0-DQd"/>
                 <outlet property="titleLabel" destination="nBf-wz-0vH" id="fUl-00-0EA"/>
+                <outlet property="titleView" destination="TCd-2P-alN" id="XpQ-sN-bak"/>
             </connections>
             <point key="canvasLocation" x="266.66666666666669" y="135.9375"/>
         </collectionViewCell>
