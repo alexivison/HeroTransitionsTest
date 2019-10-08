@@ -14,6 +14,7 @@ class ListCell: UICollectionViewCell, HasNib, HasContext {
         var album: Album
     }
 
+    @IBOutlet weak var albumDetailView: UIView!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -21,7 +22,7 @@ class ListCell: UICollectionViewCell, HasNib, HasContext {
     @IBOutlet weak var bandNameLabel: UILabel!
     
     func bind(_ context: ListCell.Context) {
-        hero.id = "albumDetail-\(context.album.id)"
+        albumDetailView.hero.id = "albumDetail-\(context.album.id)"
         
         thumbnailImageView.image = UIImage(named: context.album.thumbnailUrl)
         thumbnailImageView.hero.isEnabled = true

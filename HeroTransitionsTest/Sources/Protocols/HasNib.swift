@@ -21,3 +21,10 @@ extension HasNib {
         return UINib(nibName: identifier, bundle: nil)
     }
 }
+
+extension HasNib where Self: UIView & HasNib {
+    static func instanciate() -> Self {
+        let nib = Self.getNib()
+        return nib.instantiate(withOwner: self, options: nil).first as! Self
+    }
+}

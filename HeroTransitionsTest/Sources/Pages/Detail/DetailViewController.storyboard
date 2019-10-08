@@ -42,22 +42,25 @@
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="a08-Yh-JS5">
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sKr-RU-ENh">
                                                         <rect key="frame" x="20" y="95" width="374" height="506"/>
-                                                    </stackView>
+                                                        <connections>
+                                                            <segue destination="9kH-fp-h0Z" kind="embed" identifier="TrackListViewController" id="XGd-ot-PNs"/>
+                                                        </connections>
+                                                    </containerView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.19814800129999999" green="0.19814800129999999" blue="0.19814800129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="sKr-RU-ENh" firstAttribute="top" secondItem="5fd-jL-lVm" secondAttribute="bottom" constant="20" id="0H2-6f-N7L"/>
+                                                    <constraint firstAttribute="trailing" secondItem="sKr-RU-ENh" secondAttribute="trailing" constant="20" id="1Kj-kI-mFM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sKr-RU-ENh" secondAttribute="bottom" constant="20" id="77w-H3-bge"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5fd-jL-lVm" secondAttribute="trailing" constant="20" id="7go-QX-2yx"/>
-                                                    <constraint firstAttribute="trailing" secondItem="a08-Yh-JS5" secondAttribute="trailing" constant="20" id="AKc-Ce-cRj"/>
+                                                    <constraint firstItem="sKr-RU-ENh" firstAttribute="leading" secondItem="dsg-Xh-eqe" secondAttribute="leading" constant="20" id="AEt-au-PFa"/>
                                                     <constraint firstItem="5fd-jL-lVm" firstAttribute="top" secondItem="Cti-hw-l7P" secondAttribute="bottom" constant="8" id="C44-PV-9Jo"/>
-                                                    <constraint firstAttribute="bottom" secondItem="a08-Yh-JS5" secondAttribute="bottom" constant="20" id="J8i-t0-dX8"/>
-                                                    <constraint firstItem="a08-Yh-JS5" firstAttribute="top" secondItem="5fd-jL-lVm" secondAttribute="bottom" constant="20" id="Oux-4r-yRK"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cti-hw-l7P" secondAttribute="trailing" constant="20" id="Pex-Cg-9k9"/>
                                                     <constraint firstItem="Cti-hw-l7P" firstAttribute="top" secondItem="dsg-Xh-eqe" secondAttribute="top" constant="20" id="SUQ-nI-6tv"/>
                                                     <constraint firstItem="Cti-hw-l7P" firstAttribute="leading" secondItem="dsg-Xh-eqe" secondAttribute="leading" constant="20" id="ee0-JZ-7C2"/>
                                                     <constraint firstItem="5fd-jL-lVm" firstAttribute="leading" secondItem="dsg-Xh-eqe" secondAttribute="leading" constant="20" id="lWp-DX-QJd"/>
-                                                    <constraint firstItem="a08-Yh-JS5" firstAttribute="leading" secondItem="dsg-Xh-eqe" secondAttribute="leading" constant="20" id="wSD-MR-lR9"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -109,12 +112,19 @@
                         <outlet property="bandNameLabel" destination="5fd-jL-lVm" id="bcU-yI-rCu"/>
                         <outlet property="thumbnailImageView" destination="sNm-vF-VMe" id="URg-RG-aKc"/>
                         <outlet property="titleLabel" destination="Cti-hw-l7P" id="rUX-Fw-MzX"/>
-                        <outlet property="trackStackView" destination="a08-Yh-JS5" id="c6O-Jg-hK1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYW-wY-xFM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="169.56521739130437" y="-187.5"/>
+        </scene>
+        <!--TrackListViewController-->
+        <scene sceneID="acO-2U-7JM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TrackListViewController" referencedIdentifier="TrackListViewController" id="9kH-fp-h0Z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pC-yY-kth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="-465"/>
         </scene>
     </scenes>
 </document>

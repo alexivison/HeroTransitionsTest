@@ -20,69 +20,81 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="etG-HX-Ind">
                         <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-gh-L6l">
-                        <rect key="frame" x="20" y="258" width="310" height="72"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyN-qY-QBN">
+                        <rect key="frame" x="0.0" y="238" width="350" height="112"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-2P-alN">
-                                <rect key="frame" x="0.0" y="0.0" width="310" height="32"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-gh-L6l">
+                                <rect key="frame" x="20" y="20" width="310" height="72"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-wz-0vH">
-                                        <rect key="frame" x="8" y="6.5" width="294" height="19"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="16"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="nBf-wz-0vH" firstAttribute="leading" secondItem="TCd-2P-alN" secondAttribute="leading" constant="8" id="1MO-2a-LRx"/>
-                                    <constraint firstAttribute="trailing" secondItem="nBf-wz-0vH" secondAttribute="trailing" constant="8" id="MQu-Gp-Xsb"/>
-                                    <constraint firstAttribute="height" constant="32" id="bAJ-Ri-nRO"/>
-                                    <constraint firstItem="nBf-wz-0vH" firstAttribute="centerY" secondItem="TCd-2P-alN" secondAttribute="centerY" id="dm8-0C-IeH"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-iu-cwe">
-                                <rect key="frame" x="0.0" y="40" width="310" height="32"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iKa-iW-lnI">
-                                        <rect key="frame" x="8" y="6.5" width="294" height="19"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-2P-alN">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="32"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzZ-pD-Hhr">
-                                                <rect key="frame" x="0.0" y="0.0" width="294" height="19"/>
-                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBf-wz-0vH">
+                                                <rect key="frame" x="8" y="6.5" width="294" height="19"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="16"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="nBf-wz-0vH" firstAttribute="leading" secondItem="TCd-2P-alN" secondAttribute="leading" constant="8" id="1MO-2a-LRx"/>
+                                            <constraint firstAttribute="trailing" secondItem="nBf-wz-0vH" secondAttribute="trailing" constant="8" id="MQu-Gp-Xsb"/>
+                                            <constraint firstAttribute="height" constant="32" id="bAJ-Ri-nRO"/>
+                                            <constraint firstItem="nBf-wz-0vH" firstAttribute="centerY" secondItem="TCd-2P-alN" secondAttribute="centerY" id="dm8-0C-IeH"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-iu-cwe">
+                                        <rect key="frame" x="0.0" y="40" width="310" height="32"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iKa-iW-lnI">
+                                                <rect key="frame" x="8" y="6.5" width="294" height="19"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Band" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzZ-pD-Hhr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="19"/>
+                                                        <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="iKa-iW-lnI" firstAttribute="leading" secondItem="iz5-iu-cwe" secondAttribute="leading" constant="8" id="MK9-xj-0fl"/>
+                                            <constraint firstAttribute="trailing" secondItem="iKa-iW-lnI" secondAttribute="trailing" constant="8" id="ZKX-dw-f3D"/>
+                                            <constraint firstAttribute="height" constant="32" id="a4W-0s-kBO"/>
+                                            <constraint firstItem="iKa-iW-lnI" firstAttribute="centerY" secondItem="iz5-iu-cwe" secondAttribute="centerY" id="kJe-oH-JDj"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="iKa-iW-lnI" firstAttribute="leading" secondItem="iz5-iu-cwe" secondAttribute="leading" constant="8" id="MK9-xj-0fl"/>
-                                    <constraint firstAttribute="trailing" secondItem="iKa-iW-lnI" secondAttribute="trailing" constant="8" id="ZKX-dw-f3D"/>
-                                    <constraint firstAttribute="height" constant="32" id="a4W-0s-kBO"/>
-                                    <constraint firstItem="iKa-iW-lnI" firstAttribute="centerY" secondItem="iz5-iu-cwe" secondAttribute="centerY" id="kJe-oH-JDj"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            </stackView>
                         </subviews>
-                    </stackView>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="112" id="Dv2-Mi-wcn"/>
+                            <constraint firstAttribute="trailing" secondItem="h8m-gh-L6l" secondAttribute="trailing" constant="20" id="il4-IW-Kpm"/>
+                            <constraint firstAttribute="bottom" secondItem="h8m-gh-L6l" secondAttribute="bottom" constant="20" id="r7h-uH-fzo"/>
+                            <constraint firstItem="h8m-gh-L6l" firstAttribute="leading" secondItem="eyN-qY-QBN" secondAttribute="leading" constant="20" id="uKw-L0-SEl"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="h8m-gh-L6l" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Fww-5t-qpg"/>
                 <constraint firstAttribute="bottom" secondItem="etG-HX-Ind" secondAttribute="bottom" id="Ojx-G3-WnO"/>
+                <constraint firstAttribute="trailing" secondItem="eyN-qY-QBN" secondAttribute="trailing" id="RRO-pq-apM"/>
                 <constraint firstItem="etG-HX-Ind" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SQi-9X-yK7"/>
-                <constraint firstAttribute="trailing" secondItem="h8m-gh-L6l" secondAttribute="trailing" constant="20" id="ayj-L6-Kz8"/>
-                <constraint firstAttribute="bottom" secondItem="h8m-gh-L6l" secondAttribute="bottom" constant="20" id="f5S-nT-87U"/>
+                <constraint firstAttribute="bottom" secondItem="eyN-qY-QBN" secondAttribute="bottom" id="SUp-sE-rek"/>
+                <constraint firstItem="eyN-qY-QBN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oqz-jL-nCK"/>
                 <constraint firstItem="etG-HX-Ind" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qnU-1c-RII"/>
                 <constraint firstAttribute="trailing" secondItem="etG-HX-Ind" secondAttribute="trailing" id="tco-u2-ygT"/>
             </constraints>
@@ -93,6 +105,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="albumDetailView" destination="eyN-qY-QBN" id="nd7-xw-FDi"/>
                 <outlet property="bandNameLabel" destination="wzZ-pD-Hhr" id="Jqk-YF-ORY"/>
                 <outlet property="bandView" destination="iz5-iu-cwe" id="ahG-jv-jgl"/>
                 <outlet property="thumbnailImageView" destination="etG-HX-Ind" id="1aU-G0-DQd"/>

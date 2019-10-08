@@ -24,7 +24,6 @@ class DetailViewController: UIViewController, Injectable {
     @IBOutlet weak var albumDetailView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bandNameLabel: UILabel!
-    @IBOutlet weak var trackStackView: UIStackView!
     
     func inject(_ dependency: Dependency) {
         self.album = dependency.album
@@ -53,19 +52,6 @@ class DetailViewController: UIViewController, Injectable {
         bandNameLabel.hero.isEnabled = true
         bandNameLabel.hero.id = "bandNameLabel-\(heroId!)"
         bandNameLabel.text = album.band.name
-        
-        setTracks()
-    }
-    
-    private func setTracks() {
-        let tracks = album.tracks
-        
-        for track in tracks {
-            let trackView = UILabel()
-            trackView.text = track.title
-            
-            trackStackView.addArrangedSubview(trackView)
-        }
     }
     
     @objc
@@ -84,6 +70,13 @@ class DetailViewController: UIViewController, Injectable {
             } else {
                 Hero.shared.cancel()
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let trackListViewController = segue.destination as? TrackListViewController {
+            trackListViewController.inject(TrackListViewController.Dependency(tracks: album.tracks))
+            trackListViewController.view.translatesAutoresizingMaskIntoConstraints = false
         }
     }
 }
